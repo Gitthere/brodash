@@ -27,7 +27,7 @@ describe("Difference function", function() {
     var expected = [1, 3, 4];
     var parameter1 = [1, 2, 3, 4, 5];
     var parameter2 = [5, 2, 10];
-    var result = _.difference(input);
+    var result = _.difference(parameter1, parameter2);
     result.should.include(1);
     result.should.include(3);
     result.should.include(4);
