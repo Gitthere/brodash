@@ -1,5 +1,5 @@
 var chai = require('chai'),
-    should = chai.should,
+    should = chai.should(),
     _ = require('../brodash.js');
 
 // Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are all falsey.
