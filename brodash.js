@@ -45,6 +45,14 @@ _.difference = function (ar, value) {
 //style callback will return true for elements that have the 
 //properties of the given object, else false.
 
+// _.findIndex = function (ar, value) {
+//   for (var i = if ar.length - 1; i >= 0; i--) {
+//     if (ar[i] < 20) {
+//       return value;
+//     }
+//   };
+// }
+
 
 
 module.exports = _;
