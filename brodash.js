@@ -20,8 +20,11 @@ _.compact = function (ar) {
 
 _.difference = function (ar, value) {
   for (var i = ar.length - 1; i >= 0; i--) {
+    console.log("i is at " + i);
     for (var j = value.length - 1; j >= 0; j--) {
-      if (ar[i] === value[i]) {
+      console.log("j is at " + j);
+      if (ar[i] === value[j]) {
+        console.log("match found")
         ar.splice(i,1);
       };
     };
