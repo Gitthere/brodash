@@ -37,3 +37,22 @@ _.difference = function (ar, value) {
 
 
 module.exports = _;
+
+
+_.findIndex = function (ar, callback) {
+  for (var i = 0; i < ar.length; i++) {
+    var callback_result = callback(ar[i]); 
+    if (callback_result === true){
+      return i;
+    }
+  }
+};
+
+_.findLastIndex = function (ar, callback) {
+  for (var i = ar.length - 1; i >= 0; i--) {
+    var callback_result = callback(ar[i]);
+    if (callback_result === true){
+      return i;
+    }
+  }
+};
