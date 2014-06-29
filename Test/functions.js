@@ -100,10 +100,10 @@ describe("first function", function() {
     it("should return the first element or n element of array", function() {
         var expected = [1];
         var input = [1, 2, 3];
-        var result = _.find(input);
-        result.should.include(1);
-        result.should.not.include(2);
-        result.should.not.include(3);
+        var result = _.first(input);
+        result.should.equal(1);
+        result.should.not.equal(2);
+        result.should.not.equal(3);
 
     });
 });
