@@ -17,7 +17,7 @@ describe("Compact function", function() {
     result.should.not.include(0);
     result.should.not.include(false);
     result.should.not.include('');
-    // input.should.equal[0, 1, false, 2, '', 3];// Work in progress, no worries yet (Alex)
+    input.should.deep.equal([0, 1, false, 2, '', 3]);// Work in progress, no worries yet (Alex)
   });
 });
 
