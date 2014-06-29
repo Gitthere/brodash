@@ -3,6 +3,8 @@ var chai = require('chai'),
     _ = require('../brodash.js');
 
 // Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are all falsey.
+// Write test for new array
+// Refactor code so it passes the below test
 
 describe("Compact function", function() {
   it("should compact an Array", function() {
@@ -15,6 +17,7 @@ describe("Compact function", function() {
     result.should.not.include(0);
     result.should.not.include(false);
     result.should.not.include('');
+    // input.should.equal[0, 1, false, 2, '', 3];// Work in progress, no worries yet (Alex)
   });
 });
 
@@ -36,3 +39,28 @@ describe("Difference function", function() {
     result.should.not.include(10);
   });
 });
+
+
+//This method is like _.find except that it returns the index 
+//of the first element that passes the callback check, instead of the element itself.
+
+describe("Findindex function", function() {
+    it("should return the first element that passes the check", function() {
+        var expected = [2];
+        var characters = [
+          { 'name': 'barney',  'age': 36, 'blocked': false },
+          { 'name': 'fred',    'age': 40, 'blocked': true },
+          { 'name': 'pebbles', 'age': 1,  'blocked': false }
+        ];
+        var result = _.findIndex(characters, function(chr) {
+            return chr.age < 20;
+        });
+        result.should.equal(2);
+        result.should.not.equal(0);
+        result.should.not.equal(1);
+    });
+});
+
+
+
+
