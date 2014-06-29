@@ -90,7 +90,23 @@ describe("findLastIndex function", function() {
 });
 
 
+//Gets the first element or first n elements of an array. 
+//If a callback is provided elements at the beginning of the 
+//array are returned as long as the callback returns truey. 
+//The callback is bound to thisArg and invoked with three 
+//arguments; (value, index, array).
 
+describe("first function", function() {
+    it("should return the first element or n element of array", function() {
+        var expected = [1];
+        var input = [1, 2, 3];
+        var result = _.find(input);
+        result.should.include(1);
+        result.should.not.include(2);
+        result.should.not.include(3);
+
+    });
+});
 
 
 
