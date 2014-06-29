@@ -62,5 +62,36 @@ describe("Findindex function", function() {
 });
 
 
+// This method is like _.findIndex except that it iterates over 
+// elements of a collection from right to left.
+
+// If a property name is provided for callback the created "_.pluck" 
+// style callback will return the property value of the given element.
+
+// If an object is provided for callback the created "_.where" 
+// style callback will return true for elements that have 
+// the properties of the given object, else false.
+
+describe("findLastIndex function", function() {
+    it("should return the first element that passes the check", function() {
+        var expected = [1];
+        var characters = [
+          { 'name': 'barney',  'age': 36, 'blocked': false },
+          { 'name': 'fred',    'age': 40, 'blocked': true },
+          { 'name': 'pebbles', 'age': 1,  'blocked': false }
+        ];
+        var result = _.findLastIndex(characters, function(chr) {
+            return chr.age > 30;
+        });
+        result.should.equal(1);
+        result.should.not.equal(2);
+        result.should.not.equal(0);
+    });
+});
+
+
+
+
+
 
 
