@@ -15,17 +15,25 @@ _.compact = function (ar) {
   return output;
 }
 
+// Creates an array excluding all values of the 
+// provided arrays using strict equality for 
+// comparisons, i.e. ===.
 
-// Creates an array with all falsey values removed. The values 
-// false, null, 0, "", undefined, and NaN are all falsey.
 
-_.difference = function (ar) {
-//   for (var i = ar.length - 1; i >= 0; i--) {
-//     if (ar[i] == false) {
-//       ar.splice(i,1);
-//     };
-//   };
-// return [1, 3, 4]; //stub return
-}
+_.difference = function (ar, value) {
+  for (var i = ar.length - 1; i >= 0; i--) {
+    console.log("i is at " + i);
+    for (var j = value.length - 1; j >= 0; j--) {
+      console.log("j is at " + j);
+      if (ar[i] === value[j]) {
+        console.log("match found")
+        ar.splice(i,1);
+      };
+    };
+  };
+  return ar;
+
+};
+
 
 module.exports = _;
