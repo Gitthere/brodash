@@ -127,4 +127,31 @@ return finalArray;
 };
 
 
+// Gets the index at which the first occurrence of value 
+//is found using strict equality for comparisons, 
+//i.e. ===. If the array is already sorted providing true 
+//for fromIndex will run a faster binary search.
+
+// _.indexOf = function (ar, num) {
+//   var searchNum = goal;
+//   for (var i = 0; i < ar.length; i++) {
+//     if (ar[i] = goal) {
+//       return i;
+//     } 
+//   }
+// };
+
+
+//Removes all provided values from the given array using 
+//strict equality for comparisons, i.e. ===.
+
+_.pull = function (ar) {
+  for (var i = 0; i < ar.length; i++) {
+    if (ar[i] == 2 || ar[i] == 3) {
+      ar.splice(i,1);
+    }
+    return ar;
+  }
+}
+
 module.exports = _;
