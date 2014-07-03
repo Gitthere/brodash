@@ -108,6 +108,28 @@ describe("first function", function() {
     });
 });
 
+describe("first function", function() {
+    it("part 2 should return the first elements of array", function() {
+        var expected = [1, 2];
+        var input = [[1, 2, 3], 2];
+        var result = _.firstTwo(input);
+        result.should.deep.equal([1, 2]);
+        result.should.not.equal(3);
+        result.should.not.equal(2);
+        result.should.not.equal(1);
+        result.should.not.equal(3, 2);
+    });
+});
+
+describe("flatten function", function() {
+    it("should flatten a nested array", function() {
+        var expected = [1, 2, 3, 4];
+        var input = [1, [2], [3, [[4]]]];
+        var result = _.flatten(input, []);
+        result.should.include(1, 2, 3, 4);
+    });
+});
+
 
 
 
