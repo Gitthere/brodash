@@ -174,13 +174,14 @@ _.pull = function (ar) {
 _.remove = function (ar) {
     var evenArray = [];
     for (var i = 0; i < ar.length; i++) {
-      if (ar[i] % 2 == 0) {
+      if (ar[i] % 2 == 0) {//if element at i even, push to evenArray
         // console.log("found even number");
-        evenArray.push(ar[i]);
+        evenArray.push(ar[i]);//push number at ar[i] into evenArray
       }
      // console.log("i is at " + [i]);
     }
-    return evenArray;
+    return evenArray;//return should be outside loop. if inside
+    //loop will only run once.
 };
 
 
