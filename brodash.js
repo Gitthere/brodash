@@ -147,11 +147,14 @@ return finalArray;
 
 _.pull = function (ar) {
   for (var i = 0; i < ar.length; i++) {
-    if (ar[i] == 2 || ar[i] == 3) {
-      ar.splice(i,1);
+    if (ar[i] === 2 || ar[i] === 3) {
+      console.log('found match for splice');
+      ar.splice(i,1);//in array, splice element at i index, 1 item
+      i--;
     }
-    return ar;
+    console.log("i is at " + i);
   }
+  return ar;
 }
 
 module.exports = _;

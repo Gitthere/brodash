@@ -130,6 +130,14 @@ describe("flatten function", function() {
     });
 });
 
-
+describe("pull function", function() {
+    it("should remove values from given array", function() {
+        var expected = [1, 1];
+        var input = [1, 2, 3, 1, 2, 3];
+        var result = _.pull(input);
+        result.should.deep.equal([1, 1]);
+        
+    });
+});
 
 
