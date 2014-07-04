@@ -157,4 +157,32 @@ _.pull = function (ar) {
   return ar;
 }
 
+
+// Removes all elements from an array that the callback 
+// returns truey for and returns an array of removed 
+// elements. The callback is bound to thisArg and invoked 
+// with three arguments; (value, index, array).
+
+// If a property name is provided for callback the created
+// "_.pluck" style callback will return the property value 
+// of the given element.
+
+// If an object is provided for callback the created 
+// "_.where" style callback will return true for elements 
+// that have the properties of the given object, else false.
+
+_.remove = function (ar) {
+    var evenArray = [];
+    for (var i = 0; i < ar.length; i++) {
+      if (ar[i] % 2 == 0) {
+        // console.log("found even number");
+        evenArray.push(ar[i]);
+      }
+     // console.log("i is at " + [i]);
+    }
+    return evenArray;
+};
+
+
+
 module.exports = _;
